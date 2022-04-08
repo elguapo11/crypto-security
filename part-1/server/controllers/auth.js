@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs')
 const users = []
 
 module.exports = {
@@ -8,6 +9,7 @@ module.exports = {
       for (let i = 0; i < users.length; i++) {
         if (users[i].username === username && users[i].password === password) {
           res.status(200).send(users[i])
+          return
         }
       }
       res.status(400).send("User not found.")

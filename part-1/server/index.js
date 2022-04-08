@@ -9,7 +9,7 @@ app.use(cors())
 const {
     login,
     register
-} = require('./controllers/auth')
+} = require('./controllers/controller')
 
 app.post(`/api/login`, login)
 app.post(`/api/register`, register)
